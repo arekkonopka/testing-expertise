@@ -5,23 +5,22 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: 14.17.0
+      
+    defaults: 
+      run: working-directory: ./Frontend
 
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 14.17.0
           cache: "npm"
+          cache-dependency-path: ./Frontend/package-lock.json
+
       - run: npm ci
       - run: npm run build --if-present
-
       # - name: run contract tests
+      # working-directory: ./Frontend
       #   run: test:pact
-
       - name: Run the tests and generate coverage report
         run: npm test -- --coverage
