@@ -1,0 +1,46 @@
+{
+  "consumer": {
+    "name": "FrontEnd"
+  },
+  "provider": {
+    "name": "BackEnd"
+  },
+  "interactions": [
+    {
+      "description": "a request for users",
+      "providerState": "users",
+      "request": {
+        "method": "GET",
+        "path": "/users"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": [
+          {
+            "name": "arek",
+            "id": 1,
+            "description": "contract tests"
+          },
+          {
+            "name": "marek",
+            "id": 2,
+            "description": "contract tests 2"
+          },
+          {
+            "name": "bartek",
+            "id": 3,
+            "description": "contract tests 3"
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
