@@ -10,6 +10,7 @@ function App() {
   }, []);
   return (
     <div className="App">
+      <h1>Lista uzytkowników</h1>
       <ol>
         {users?.map((el, idx) => (
           <li key={idx}>

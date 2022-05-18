@@ -23,5 +23,6 @@ jobs:
       # - name: run contract tests
       # working-directory: ./Frontend
       #   run: test:pact
+      # - run: yarn cypress:run
       - name: Run the tests and generate coverage report
         run: npm test -- --coverage
