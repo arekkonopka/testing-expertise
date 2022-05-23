@@ -18,9 +18,12 @@ jobs:
         cache: "npm"
         cache-dependency-path: ./Frontend/package-lock.json
 
-      run: npm ci
-      run: npm run build --if-present
+      working-directory: ./Server
+      run: npm i
+      run: npm start
+
       working-directory: ./Frontend
+      run: npm run build --if-present
       run: npm i
     - name: run contract tests
       run: test:pact
