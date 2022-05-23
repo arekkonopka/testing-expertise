@@ -20,8 +20,9 @@ jobs:
 
       run: npm ci
       run: npm run build --if-present
-    - name: run contract tests
       working-directory: ./Frontend
+      run: npm i
+    - name: run contract tests
       run: test:pact
       run: yarn cypress:run
     - name: Run stryker test
