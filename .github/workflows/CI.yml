@@ -17,12 +17,13 @@ jobs:
         node-version: 16.13.0
         cache: "npm"
 
-      working-directory: ./Server
 
     - name: install dependencies
+      working-directory: ./Server
       run: npm install
 
     - name: start server
+      working-directory: ./Server
       run: npm start
 
       working-directory: ./Frontend
