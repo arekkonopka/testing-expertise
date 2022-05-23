@@ -8,8 +8,10 @@
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
+    "lodash": "^4.17.21",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -18,7 +20,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test:pact": "CI=true react-scripts test --runInBand --testMatch \"**/*api.test.js\""
+    "test:pact": " CI=true react-scripts test --runInBand --testMatch \"**/*pactTest.test.js\"",
+    "test:stryker": "npx stryker run",
+    "cypress:open": "npx cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -37,5 +41,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@stryker-mutator/core": "^6.0.2",
+    "@stryker-mutator/jest-runner": "^6.0.2",
+    "cypress": "^9.6.1",
+    "cypress-localstorage-commands": "^1.7.0"
   }
 }

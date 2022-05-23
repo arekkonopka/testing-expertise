@@ -1,4 +1,4 @@
-I, [2022-05-17T08:18:55.059110 #92205]  INFO -- : Registered expected interaction GET /users
-I, [2022-05-17T08:18:55.075398 #92205]  INFO -- : Received request GET /users
-I, [2022-05-17T08:18:55.075809 #92205]  INFO -- : Found matching response for GET /users
-I, [2022-05-17T08:18:55.108413 #92205]  INFO -- : Writing pact for BackEnd to /Users/arekkonopka/training/contract-testing/Frontend/pacts/frontend-backend.json
+I, [2022-05-23T13:51:31.949016 #26672]  INFO -- : Registered expected interaction GET /users
+I, [2022-05-23T13:51:31.966459 #26672]  INFO -- : Received request GET /users
+I, [2022-05-23T13:51:31.966810 #26672]  INFO -- : Found matching response for GET /users
+I, [2022-05-23T13:51:32.006517 #26672]  INFO -- : Writing pact for BackEnd to /Users/arekkonopka/training/contract-testing/Frontend/pacts/frontend-backend.json
