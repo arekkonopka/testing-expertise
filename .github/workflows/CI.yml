@@ -13,22 +13,30 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
-      with:
-        node-version: 16.13.0
-        cache: "npm"
-        cache-dependency-path: ./Frontend/package-lock.json
+        with:
+          node-version: 16.13.0
+          cache: "npm"
 
-      working-directory: ./Server
-      run: npm i
-      run: npm start
+        working-directory: ./Server
 
-      working-directory: ./Frontend
-      run: npm run build --if-present
-      run: npm i
+    - name: install dependencies
+        run: npm install
+
+    - name: start server
+        run: npm start
+
+        working-directory: ./Frontend
+    - name: install dependencies
+        run: npm install
+
     - name: run contract tests
-      run: test:pact
-      run: yarn cypress:run
+        run: test:pact
+
+    - name: run cypress tests
+        run: yarn cypress:run
+
     - name: Run stryker test
-      run: npm run test:stryker
+        run: npm run test:stryker
+
     - name: Run the tests and generate coverage report
-      run: npm test -- --coverage
+        run: npm test -- --coverage
