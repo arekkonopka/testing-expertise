@@ -21,7 +21,7 @@ jobs:
       run: npm ci
       run: npm run build --if-present
     - name: run contract tests
-    working-directory: ./Frontend
+      working-directory: ./Frontend
       run: test:pact
       run: yarn cypress:run
     - name: Run stryker test
