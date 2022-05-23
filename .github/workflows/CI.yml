@@ -20,23 +20,23 @@ jobs:
       working-directory: ./Server
 
     - name: install dependencies
-        run: npm install
+      run: npm install
 
     - name: start server
-        run: npm start
+      run: npm start
 
-        working-directory: ./Frontend
+      working-directory: ./Frontend
     - name: install dependencies
-        run: npm install
+      run: npm install
 
     - name: run contract tests
-        run: test:pact
+      run: test:pact
 
     - name: run cypress tests
-        run: yarn cypress:run
+      run: yarn cypress:run
 
     - name: Run stryker test
-        run: npm run test:stryker
+      run: npm run test:stryker
 
     - name: Run the tests and generate coverage report
-        run: npm test -- --coverage
+      run: npm test -- --coverage
