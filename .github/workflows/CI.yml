@@ -37,9 +37,11 @@ jobs:
 
     - name: Cypress run
       uses: cypress-io/github-action@v2
-      # with:
+      with:
+        install: false
+        start: npm start
+        wait-on: 'http://localhost:3000'
       #   build: npm run build
-      #   start: npm start
 
     - name: Run stryker test
       run: npm run test:stryker
