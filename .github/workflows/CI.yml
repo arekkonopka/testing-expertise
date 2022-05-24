@@ -37,9 +37,9 @@ jobs:
 
     - name: Cypress run
       uses: cypress-io/github-action@v2
-      with:
-        build: npm run build
-        start: npm start
+      # with:
+      #   build: npm run build
+      #   start: npm start
 
     - name: Run stryker test
       run: npm run test:stryker
