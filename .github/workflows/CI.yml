@@ -26,8 +26,9 @@ jobs:
       uses: cypress-io/github-action@v2
       with:
           install: true
-          # start: npm start .
           working-directory: ./Frontend
+          start: npm start 
+          wait-on: 'http://localhost:3000'
      
     - name: run contract tests
       run: npm run test:pact
