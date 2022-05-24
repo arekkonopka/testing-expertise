@@ -26,9 +26,9 @@ jobs:
     #   working-directory: ./Server
     #   run: npm start
 
-    - name: install dependencies
-      run: npm ci
-      run: npm run build --if-present
+    
+    - run: npm ci
+    - run: npm run build --if-present
 
     - name: run contract tests
       run: test:pact
