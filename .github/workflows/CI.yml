@@ -35,8 +35,11 @@ jobs:
     - name: run contract tests
       run: npm run test:pact
 
-    - name: run cypress tests
-      run: npx cypress run
+    - name: Cypress run
+      uses: cypress-io/github-action@v2
+      with:
+        build: npm run build
+        start: npm start
 
     - name: Run stryker test
       run: npm run test:stryker
