@@ -23,6 +23,7 @@ jobs:
          CI: false
 
     - name: Cypress run
+      working-directory: ./Frontend
       uses: cypress-io/github-action@v2
       with:
           build: npm run build
