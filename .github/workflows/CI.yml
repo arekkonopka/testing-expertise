@@ -36,7 +36,7 @@ jobs:
       run: npm run test:pact
 
     - name: run cypress tests
-      run: yarn cypress:run
+      run: npx cypress run
 
     - name: Run stryker test
       run: npm run test:stryker
