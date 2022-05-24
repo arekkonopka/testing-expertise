@@ -16,16 +16,6 @@ jobs:
       with:
         node-version: 14.17.0
         cache: "npm"
-
-
-    # - name: install dependencies
-    #   working-directory: ./Server
-    #   run: npm install
-
-    # - name: start server
-    #   working-directory: ./Server
-    #   run: npm start
-
     
     - run: npm ci
     - run: npm run build --if-present
@@ -39,9 +29,6 @@ jobs:
       uses: cypress-io/github-action@v2
       with:
         install: false
-        start: npm start
-        wait-on: 'http://localhost:3000'
-      #   build: npm run build
 
     - name: Run stryker test
       run: npm run test:stryker
