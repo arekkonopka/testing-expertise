@@ -28,7 +28,7 @@ jobs:
 
     - name: install dependencies
       working-directory: ./Frontend
-      run: npm install
+      run: npm CI
 
     - name: run contract tests
       working-directory: ./Frontend
