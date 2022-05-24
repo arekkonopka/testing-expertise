@@ -27,21 +27,17 @@ jobs:
     #   run: npm start
 
     - name: install dependencies
-      working-directory: ./Frontend
-      run: npm install
+      run: npm ci
+      run: npm run build --if-present
 
     - name: run contract tests
-      working-directory: ./Frontend
       run: test:pact
 
     - name: run cypress tests
-      working-directory: ./Frontend
       run: yarn cypress:open
 
     - name: Run stryker test
-      working-directory: ./Frontend
       run: npm run test:stryker
 
     - name: Run the tests and generate coverage report
-      working-directory: ./Frontend
       run: npm test -- --coverage
