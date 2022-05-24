@@ -23,11 +23,11 @@ jobs:
          CI: false
 
     - name: Cypress run
-      working-directory: ./Frontend
       uses: cypress-io/github-action@v2
       with:
-          build: npm run build
-          start: npm start
+          install: true
+          # start: npm start .
+          working-directory: ./Frontend
      
     - name: run contract tests
       run: npm run test:pact
