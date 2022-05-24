@@ -33,7 +33,7 @@ jobs:
          CI: false
 
     - name: run contract tests
-      run: test:pact
+      run: npm test:pact
 
     - name: run cypress tests
       run: yarn cypress:open
