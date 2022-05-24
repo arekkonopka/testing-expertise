@@ -22,13 +22,12 @@ jobs:
       env:
          CI: false
 
+    - name: Cypress run
+      uses: cypress-io/github-action@v2
+     
     - name: run contract tests
       run: npm run test:pact
 
-    - name: Cypress run
-      uses: cypress-io/github-action@v2
-      with:
-        install: false
 
     - name: Run stryker test
       run: npm run test:stryker
