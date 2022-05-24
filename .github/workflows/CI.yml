@@ -18,13 +18,13 @@ jobs:
         cache: "npm"
 
 
-    - name: install dependencies
-      working-directory: ./Server
-      run: npm install
+    # - name: install dependencies
+    #   working-directory: ./Server
+    #   run: npm install
 
-    - name: start server
-      working-directory: ./Server
-      run: npm start
+    # - name: start server
+    #   working-directory: ./Server
+    #   run: npm start
 
     - name: install dependencies
       working-directory: ./Frontend
@@ -36,7 +36,7 @@ jobs:
 
     - name: run cypress tests
       working-directory: ./Frontend
-      run: yarn cypress:run
+      run: yarn cypress:open
 
     - name: Run stryker test
       working-directory: ./Frontend
